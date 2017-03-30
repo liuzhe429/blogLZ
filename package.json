@@ -1,0 +1,28 @@
+{
+  "name": "bloglz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuzhe429/bloglz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuzhe429/bloglz/issues"
+  },
+  "homepage": "https://github.com/liuzhe429/bloglz#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "serve-favicon": "^2.4.2"
+  }
+}
