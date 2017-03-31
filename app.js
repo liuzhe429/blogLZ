@@ -3,7 +3,8 @@ var express = require("express");
 var ejs = require("ejs");
 var express = require('express');
 var index = require("./routes/index");
-var user = require("./routes/user");
+var archives = require("./routes/archives");
+var tags = require("./routes/tags");
 var app = express();
 /*???????*/
 var favicon = require('serve-favicon');
@@ -28,21 +29,20 @@ app.use(function (req,res,next) {
     next();
 })
 app.use("/",index);
-app.use("/user",user);
+app.use("/archives",archives);
+app.use("/tags",tags);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
-//静态资源
-var fs=require('fs');
-var url=require('url');
 
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
+        console.log(err)
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
