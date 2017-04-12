@@ -5,6 +5,8 @@ var express = require('express');
 var index = require("./routes/index");
 var archives = require("./routes/archives");
 var tags = require("./routes/tags");
+// 后台部分路由
+var adminArticle = require("./routes/admin/article");
 var app = express();
 /*???????*/
 var favicon = require('serve-favicon');
@@ -31,6 +33,7 @@ app.use(function (req,res,next) {
 app.use("/",index);
 app.use("/archives",archives);
 app.use("/tags",tags);
+app.use("/admin",adminArticle);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
